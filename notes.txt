@@ -1,0 +1,36 @@
+A React component should use props to store information that can be changed, but can only be changed by a different component.
+
+A React component should use state to store information that the component itself can change.
+
+Separating container components from presentational components is a popular React programming pattern.
+
+
+If your React app uses AJAX to fetch initial data from an API, then componentDidMount is the place to make that AJAX call. More generally, componentDidMount is a good place to connect a React app to external applications, such as web APIs or JavaScript frameworks. componentDidMount is also the place to set timers using setTimeout or setInterval.
+
+
+setTimeout(expression, timeout); runs the code/function once after the timeout.
+
+setInterval(expression, timeout); runs the code/function in intervals, with the length of the timeout between them.
+
+
+This is a common use of componentWillReceiveProps: comparing incoming props to current props or state, and deciding what to render based on that comparison.
+
+
+componentWillUnmount is the only unmounting lifecycle method!
+
+There are five updating lifecycle methods:
+
+componentWillReceiveProps: called before rendering, componentWillReceiveProps only gets called if the component will receive props comparing incoming props to current props or state, and deciding what to render based on that comparison.
+
+
+shouldComponentUpdate: When a component updates, shouldComponentUpdate gets called after componentWillReceiveProps, but still before the rendering begins. should return either true or false. If shouldComponentUpdate returns true, then nothing noticeable happens. But if shouldComponentUpdate returns false, then the component will not update!
+
+
+componentWillUpdate: componentWillUpdate gets called in between shouldComponentUpdate and render. The main purpose of componentWillUpdate is to interact with things outside of the React architecture. If you need to do non-React setup before a component renders, such as checking the window size or interacting with an API, then componentWillUpdate is a good place to do that.
+
+
+
+render:
+
+
+componentDidUpdate: When a component instance updates, componentDidUpdate gets called after any rendered HTML has finished loading.componentDidUpdate automatically gets passed two arguments: prevProps and prevState.
