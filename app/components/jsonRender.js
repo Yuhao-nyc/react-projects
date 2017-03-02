@@ -29,7 +29,18 @@ var JsonDiv = React.createClass({
       render: function() {
         return (
           <div>
-             <h1>Bunch of Lists</h1>
+             <br />
+             <br />
+             <div className="jumbotron">
+                <h3 className="display-3">Job Listing Tool</h3>
+                <p className="lead">This is a simple job listing streaming tool build with React.JS. Parsing JSON data using React.JS and Axios.</p>
+                <hr className="my-4" />
+                <p>Its shows you all the latest live job listings from CodePen job lists databases.</p>
+                <p className="lead">
+                  <a className="btn btn-primary btn-lg" href="https://github.com/Yuhao-nyc/react-projects" role="button">Learn more</a>
+                </p>
+             </div>
+             <h6></h6>
              {this.state.jobs.map(function(data, index) {
                    return (
                    <div key={index}>

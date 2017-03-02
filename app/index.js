@@ -3,7 +3,6 @@ var ReactDOM = require('react-dom');
 var MyDiv = require('./components/myDiv');
 var MyButton = require('./components/myButton');
 var JsonDiv = require('./components/jsonRender');
-var PriceApp = require('./components/priceApp');
 
 
 var userAge = 19;
@@ -23,7 +22,7 @@ var globalStyles = {
 }
 
 //render variables && If you want to create a list of JSX elements
-var todoList = (
+/*var todoList = (
     <ul>
         <li>Algorithms</li>
         <li>Angular 2</li>
@@ -37,7 +36,7 @@ ReactDOM.render(
     todoList,
     document.getElementById('list')
 )
-
+*/
 
 //TODO
 function randomColor() {
@@ -88,7 +87,7 @@ var userImg = [
       },
 ]
 
-var ProfilePage = React.createClass({
+/*var ProfilePage = React.createClass({
   // this refers to the instructions object being passed to React.createClass. this has two properties: user_name and render
   // identifying and referring to the object that we’re currently working with
   user_name: 'Yuhao',
@@ -143,10 +142,10 @@ var ProfilePage = React.createClass({
 ReactDOM.render(
 	<ProfilePage myProp="Master" info="NYU" />,
     document.getElementById('app')
-)
+)*/
 
 
-var ProfileApp = React.createClass({
+/*var ProfileApp = React.createClass({
     getInitialState: function() {
        return {
          name: 'Admin',
@@ -176,7 +175,7 @@ var ProfileApp = React.createClass({
 ReactDOM.render(
     <ProfileApp />,
     document.getElementById('profile-app')
-)
+)*/
 
 var JobApp = React.createClass({
     render: function() {
