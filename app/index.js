@@ -2,6 +2,9 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var MyDiv = require('./components/myDiv');
 var MyButton = require('./components/myButton');
+var JsonDiv = require('./components/jsonRender');
+var PriceApp = require('./components/priceApp');
+
 
 var userAge = 19;
 
@@ -15,7 +18,7 @@ var habitsList = habitArray.map(function(list, i) {
 
 var globalStyles = {
     color: '#f9f9f9',
-    border: '1px solid #ddd'.
+    border: '1px solid #ddd',
     fontSize: 30,
 }
 
@@ -173,5 +176,19 @@ var ProfileApp = React.createClass({
 ReactDOM.render(
     <ProfileApp />,
     document.getElementById('profile-app')
+)
 
+var JobApp = React.createClass({
+    render: function() {
+        return (
+            <div>
+                 <JsonDiv url="https://codepen.io/jobs.json"/>
+            </div>
+        )
+    }
+})
+
+ReactDOM.render(
+    <JobApp />,
+    document.getElementById('jobs')
 )
